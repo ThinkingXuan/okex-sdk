@@ -122,8 +122,8 @@ type (
 		Sz        okex.JSONFloat64    `json:"sz"`
 		Pnl       okex.JSONFloat64    `json:"pnl"`
 		Fee       okex.JSONFloat64    `json:"fee"`
-		From      okex.AccountType    `json:"from,string"`
-		To        okex.AccountType    `json:"to,string"`
+		From      string              `json:"from,string"`
+		To        string              `json:"to,string"`
 		InstType  okex.InstrumentType `json:"instType"`
 		MgnMode   okex.MarginMode     `json:"MgnMode"`
 		Type      okex.BillType       `json:"type,string"`

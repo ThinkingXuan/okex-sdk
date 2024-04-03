@@ -71,7 +71,7 @@ func (c *Account) GetPositions(req requests.GetPositions) (response responses.Ge
 //
 // https://www.okex.com/docs-v5/en/#rest-api-account-get-account-and-position-risk
 func (c *Account) GetAccountAndPositionRisk(req requests.GetAccountAndPositionRisk) (response responses.GetAccountAndPositionRisk, err error) {
-	p := "/api/v5/account/positions"
+	p := "/api/v5/account/account-position-risk"
 	m := okex.S2M(req)
 	res, err := c.client.Do(http.MethodGet, p, true, m)
 	if err != nil {
