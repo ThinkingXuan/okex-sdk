@@ -83,13 +83,26 @@ func TestBills(t *testing.T) {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	//res3months, err := client.Rest.Account.GetBills(req, true)
-	//if err != nil {
-	//	log.Fatalln(err)
-	//}
-	//
+	res3months, err := client.Rest.Account.GetBills(req, true)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
 	log.Printf("%#v", res7days)
-	//log.Printf("%#v", res3months)
+	log.Printf("%#v", res3months)
+}
+
+// 查看账户配置
+// https://www.okx.com/docs-v5/zh/#trading-account-rest-api-get-account-configuration
+func TestConfig(t *testing.T) {
+	client := initClient()
+
+	res, err := client.Rest.Account.GetConfig()
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	log.Printf("%#v", res)
 }
 
 func initClient() *api.Client {

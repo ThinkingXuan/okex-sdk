@@ -122,12 +122,12 @@ type (
 		Sz        okex.JSONFloat64    `json:"sz"`
 		Pnl       okex.JSONFloat64    `json:"pnl"`
 		Fee       okex.JSONFloat64    `json:"fee"`
-		From      string              `json:"from,string"`
-		To        string              `json:"to,string"`
+		From      string              `json:"from"`
+		To        string              `json:"to"`
 		InstType  okex.InstrumentType `json:"instType"`
 		MgnMode   okex.MarginMode     `json:"MgnMode"`
-		Type      okex.BillType       `json:"type,string"`
-		SubType   okex.BillSubType    `json:"subType,string"`
+		Type      okex.BillType       `json:"type"`
+		SubType   okex.BillSubType    `json:"subType"`
 		TS        okex.JSONTime       `json:"ts"`
 	}
 	Config struct {
